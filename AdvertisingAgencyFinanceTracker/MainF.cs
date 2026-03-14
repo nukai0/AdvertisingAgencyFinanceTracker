@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AdvertisingAgencyFinanceTracker
 {
-    public partial class AuthorizationF : Form
+    public partial class MainF : Form
     {
-        public AuthorizationF()
+        public MainF()
         {
             InitializeComponent();
         }

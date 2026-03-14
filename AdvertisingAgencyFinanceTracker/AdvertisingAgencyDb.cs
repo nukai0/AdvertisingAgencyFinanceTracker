@@ -8,6 +8,6 @@ namespace AdvertisingAgencyFinanceTracker
 {
     internal class AdvertisingAgencyDb
     {
-        private static readonly string connectionString = "Host=localhost;Port=5433;Database=AdvertisingAgencyDb;Username=postgres;Password=1234";
+        public static readonly string connectionString = "Host=localhost;Port=5433;Database=AdvertisingAgencyDb;Username=postgres;Password=1234";
     }
 }

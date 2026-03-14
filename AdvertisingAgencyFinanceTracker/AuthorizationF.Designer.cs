@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loginTB = new System.Windows.Forms.TextBox();
+            this.enterB = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.passTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.passChangeL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // loginTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.loginTB.Location = new System.Drawing.Point(65, 67);
+            this.loginTB.Name = "loginTB";
+            this.loginTB.Size = new System.Drawing.Size(100, 20);
+            this.loginTB.TabIndex = 0;
             // 
-            // button1
+            // enterB
             // 
-            this.button1.Location = new System.Drawing.Point(74, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = true;
+            this.enterB.Location = new System.Drawing.Point(74, 161);
+            this.enterB.Name = "enterB";
+            this.enterB.Size = new System.Drawing.Size(75, 23);
+            this.enterB.TabIndex = 1;
+            this.enterB.Text = "Войти";
+            this.enterB.UseVisualStyleBackColor = true;
+            this.enterB.Click += new System.EventHandler(this.enterB_Click);
             // 
             // label1
             // 
@@ -62,13 +63,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Логин";
             // 
-            // textBox2
+            // passTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(65, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.passTB.Location = new System.Drawing.Point(65, 117);
+            this.passTB.Name = "passTB";
+            this.passTB.PasswordChar = '*';
+            this.passTB.Size = new System.Drawing.Size(100, 20);
+            this.passTB.TabIndex = 3;
             // 
             // label2
             // 
@@ -80,15 +81,15 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Пароль";
             // 
-            // label3
+            // passChangeL
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(132, 239);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Сменить пароль";
+            this.passChangeL.AutoSize = true;
+            this.passChangeL.ForeColor = System.Drawing.Color.White;
+            this.passChangeL.Location = new System.Drawing.Point(132, 239);
+            this.passChangeL.Name = "passChangeL";
+            this.passChangeL.Size = new System.Drawing.Size(90, 13);
+            this.passChangeL.TabIndex = 5;
+            this.passChangeL.Text = "Сменить пароль";
             // 
             // AuthorizationF
             // 
@@ -96,12 +97,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(234, 261);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.passChangeL);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.passTB);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.enterB);
+            this.Controls.Add(this.loginTB);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AuthorizationF";
@@ -114,12 +115,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox loginTB;
+        private System.Windows.Forms.Button enterB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox passTB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label passChangeL;
     }
 }
 
