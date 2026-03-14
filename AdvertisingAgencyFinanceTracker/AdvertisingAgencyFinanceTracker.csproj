@@ -54,6 +54,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableObjects\Account.cs" />
+    <Compile Include="TableObjects\Client.cs" />
+    <Compile Include="TableObjects\Expense.cs" />
+    <Compile Include="TableObjects\Invoice.cs" />
+    <Compile Include="TableObjects\Manager.cs" />
+    <Compile Include="TableObjects\Payment.cs" />
+    <Compile Include="TableObjects\Proposal.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
