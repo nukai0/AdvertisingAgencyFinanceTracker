@@ -11,5 +11,7 @@ namespace AdvertisingAgencyFinanceTracker
     {
         Task<Account> GetAccountAsync(string login, int password);
         Task<bool> UpdatePasswordAsync(string login, int oldPassword, int newPassword);
+        IEnumerable<Proposal> GetProposals();
+        int GetAmountInInvoice();
     }
 }

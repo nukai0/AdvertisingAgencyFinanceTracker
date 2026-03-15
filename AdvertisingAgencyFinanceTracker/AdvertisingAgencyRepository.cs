@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Npgsql;
 using Dapper;
 using AdvertisingAgencyFinanceTracker.TableObjects;
+using System.Collections;
+using System.Runtime.Remoting.Messaging;
 
 namespace AdvertisingAgencyFinanceTracker
 {
@@ -35,6 +37,32 @@ namespace AdvertisingAgencyFinanceTracker
 
                 if(affectedRows > 0) return true;
                 else return false;
+            }
+        }
+
+        public IEnumerable<Proposal> GetProposals()
+        {
+            using (var conn = new NpgsqlConnection(connection))
+            {
+                return conn.Query<Proposal, Client, Proposal>("SELECT proposal.id, proposal.date, proposal.amount, client.id, client.company_name, client.contact_person, client.phone_number FROM proposal" +
+                    " JOIN client ON client.id = proposal.client_id",
+                    (proposal, client) =>
+                    {
+                        proposal.ClientProposal = client;
+                        return proposal;
+                    },
+                    splitOn: "id");
+            }
+        }
+
+        public int GetAmountInInvoice()
+        {
+            using (var conn = new NpgsqlConnection(connection))
+            {
+                int payments = conn.QueryFirstOrDefault<int>("SELECT SUM(amount) FROM payment;");
+                int expenses = conn.QueryFirstOrDefault<int>("SELECT SUM(amount) FROM expense;");
+
+                return payments - expenses;
             }
         }
     }
