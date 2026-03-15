@@ -130,6 +130,9 @@
     <EmbeddedResource Include="ChangePasswordF.resx">
       <DependentUpon>ChangePasswordF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainF.resx">
+      <DependentUpon>MainF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

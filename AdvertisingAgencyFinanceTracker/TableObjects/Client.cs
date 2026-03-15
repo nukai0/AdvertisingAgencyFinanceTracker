@@ -11,6 +11,7 @@ namespace AdvertisingAgencyFinanceTracker.TableObjects
         public int Id { get; set; }
         public string Company_name { get; set; }
         public string Contact_person { get; set; }
+        public string Phone_number { get; set; }
         public int Manager_id { get; set; }
     }
 }

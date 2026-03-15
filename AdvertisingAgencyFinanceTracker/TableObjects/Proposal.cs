@@ -9,8 +9,9 @@ namespace AdvertisingAgencyFinanceTracker.TableObjects
     internal class Proposal
     {
         public int Id { get; set; }
-        public int Client_id { get; set; }
+        public Client ClientProposal { get; set; }
         public DateTime Date { get; set; }
+        public string DateDisplay => Date.ToString("dd.MM.yyyy");
         public int Amount { get; set; }
     }
 }
