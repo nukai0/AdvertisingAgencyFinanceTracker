@@ -10,5 +10,6 @@ namespace AdvertisingAgencyFinanceTracker
     internal interface IAdvertisingAgencyRepository
     {
         Task<Account> GetAccountAsync(string login, int password);
+        Task<bool> UpdatePasswordAsync(string login, int oldPassword, int newPassword);
     }
 }

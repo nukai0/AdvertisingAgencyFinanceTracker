@@ -102,6 +102,12 @@
     <Compile Include="AuthorizationF.Designer.cs">
       <DependentUpon>AuthorizationF.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePasswordF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordF.Designer.cs">
+      <DependentUpon>ChangePasswordF.cs</DependentUpon>
+    </Compile>
     <Compile Include="IAdvertisingAgencyRepository.cs" />
     <Compile Include="MainF.cs">
       <SubType>Form</SubType>
@@ -120,6 +126,9 @@
     <Compile Include="TableObjects\Proposal.cs" />
     <EmbeddedResource Include="AuthorizationF.resx">
       <DependentUpon>AuthorizationF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordF.resx">
+      <DependentUpon>ChangePasswordF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
