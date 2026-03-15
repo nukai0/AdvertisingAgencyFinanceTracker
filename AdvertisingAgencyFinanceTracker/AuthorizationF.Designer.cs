@@ -90,6 +90,7 @@
             this.passChangeL.Size = new System.Drawing.Size(90, 13);
             this.passChangeL.TabIndex = 5;
             this.passChangeL.Text = "Сменить пароль";
+            this.passChangeL.Click += new System.EventHandler(this.passChangeL_Click);
             // 
             // AuthorizationF
             // 

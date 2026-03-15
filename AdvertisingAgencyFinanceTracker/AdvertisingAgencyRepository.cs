@@ -25,5 +25,17 @@ namespace AdvertisingAgencyFinanceTracker
                     new {@Login = login, @Password = password});
             }
         }
+
+        public async Task<bool> UpdatePasswordAsync(string login, int oldPassword, int newPassword)
+        {
+            using (var conn = new NpgsqlConnection(connection))
+            {
+                int affectedRows = await conn.ExecuteAsync("UPDATE account SET password = @NewPassword WHERE login = @Login AND password = @OldPassword", 
+                    new {@Login = login, @OldPassword = oldPassword, @NewPassword = newPassword});
+
+                if(affectedRows > 0) return true;
+                else return false;
+            }
+        }
     }
 }

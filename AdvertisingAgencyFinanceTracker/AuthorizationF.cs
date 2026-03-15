@@ -39,5 +39,12 @@ namespace AdvertisingAgencyFinanceTracker
             }
             else MessageBox.Show("Данные введены не коректно");
         }
+
+        private void passChangeL_Click(object sender, EventArgs e)
+        {
+            var changePassF = new ChangePasswordF();
+            this.Hide();
+            changePassF.Show();
+        }
     }
 }
