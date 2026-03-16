@@ -36,12 +36,12 @@
             this.amoun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountInInvoice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoicesWithClentsDGV = new System.Windows.Forms.DataGridView();
+            this.company_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contact_person = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentsB = new System.Windows.Forms.Button();
             this.rollUpB = new System.Windows.Forms.Button();
             this.paymentsDGV = new System.Windows.Forms.DataGridView();
@@ -51,7 +51,7 @@
             this.expenseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expenseAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.proposalsWithClientsDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesWithClentsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesDGV)).BeginInit();
             this.SuspendLayout();
@@ -116,45 +116,45 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Деньги на счете: ";
             // 
-            // dataGridView1
+            // invoicesWithClentsDGV
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 144);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(561, 126);
-            this.dataGridView1.TabIndex = 3;
+            this.invoicesWithClentsDGV.AllowUserToAddRows = false;
+            this.invoicesWithClentsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invoicesWithClentsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.company_name,
+            this.contact_person,
+            this.invoiceDate,
+            this.invoiceAmount,
+            this.invoiceStatus});
+            this.invoicesWithClentsDGV.Location = new System.Drawing.Point(12, 144);
+            this.invoicesWithClentsDGV.Name = "invoicesWithClentsDGV";
+            this.invoicesWithClentsDGV.Size = new System.Drawing.Size(561, 126);
+            this.invoicesWithClentsDGV.TabIndex = 3;
             // 
-            // dataGridViewTextBoxColumn1
+            // company_name
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Название компании";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.company_name.HeaderText = "Название компании";
+            this.company_name.Name = "company_name";
             // 
-            // dataGridViewTextBoxColumn2
+            // contact_person
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Контактное лицо";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.contact_person.HeaderText = "Контактное лицо";
+            this.contact_person.Name = "contact_person";
             // 
-            // dataGridViewTextBoxColumn3
+            // invoiceDate
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Номер телефона";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.invoiceDate.HeaderText = "Дата";
+            this.invoiceDate.Name = "invoiceDate";
             // 
-            // dataGridViewTextBoxColumn4
+            // invoiceAmount
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Дата";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.invoiceAmount.HeaderText = "Сумма";
+            this.invoiceAmount.Name = "invoiceAmount";
             // 
-            // dataGridViewTextBoxColumn5
+            // invoiceStatus
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Сумма";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.invoiceStatus.HeaderText = "Статус";
+            this.invoiceStatus.Name = "invoiceStatus";
             // 
             // paymentsB
             // 
@@ -231,7 +231,7 @@
             this.Controls.Add(this.paymentsDGV);
             this.Controls.Add(this.rollUpB);
             this.Controls.Add(this.paymentsB);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.invoicesWithClentsDGV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.amountInInvoice);
             this.Controls.Add(this.proposalsWithClientsDGV);
@@ -241,7 +241,7 @@
             this.Text = "Главная";
             this.Load += new System.EventHandler(this.MainF_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proposalsWithClientsDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesWithClentsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesDGV)).EndInit();
             this.ResumeLayout(false);
@@ -259,12 +259,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amoun;
         private System.Windows.Forms.Label amountInInvoice;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridView invoicesWithClentsDGV;
         private System.Windows.Forms.Button paymentsB;
         private System.Windows.Forms.Button rollUpB;
         private System.Windows.Forms.DataGridView paymentsDGV;
@@ -273,5 +268,10 @@
         private System.Windows.Forms.DataGridView expensesDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn expenseDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn expenseAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn company_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact_person;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceStatus;
     }
 }
