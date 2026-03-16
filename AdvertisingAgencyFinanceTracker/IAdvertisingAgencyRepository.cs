@@ -13,5 +13,7 @@ namespace AdvertisingAgencyFinanceTracker
         Task<bool> UpdatePasswordAsync(string login, int oldPassword, int newPassword);
         IEnumerable<Proposal> GetProposals();
         int GetAmountInInvoice();
+        IEnumerable<Payment> GetPayments();
+        IEnumerable<Expense> GetExpenses();
     }
 }

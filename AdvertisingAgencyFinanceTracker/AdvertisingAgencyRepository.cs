@@ -65,5 +65,21 @@ namespace AdvertisingAgencyFinanceTracker
                 return payments - expenses;
             }
         }
+
+        public IEnumerable<Payment> GetPayments()
+        {
+            using (var conn = new NpgsqlConnection(connection))
+            {
+                return conn.Query<Payment>("SELECT * FROM payment");
+            }
+        }
+
+        public IEnumerable<Expense> GetExpenses()
+        {
+            using (var conn = new NpgsqlConnection(connection))
+            {
+                return conn.Query<Expense>("SELECT * FROM expense");
+            }
+        }
     }
 }

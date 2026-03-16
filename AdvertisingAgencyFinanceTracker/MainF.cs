@@ -20,6 +20,8 @@ namespace AdvertisingAgencyFinanceTracker
 
         private void MainF_Load(object sender, EventArgs e)
         {
+            this.Size = new System.Drawing.Size(600, 350);
+
             var rep = new AdvertisingAgencyRepository(AdvertisingAgencyDb.connectionString);
             var proposals = rep.GetProposals();
 
@@ -33,6 +35,34 @@ namespace AdvertisingAgencyFinanceTracker
             }
 
             amountInInvoice.Text = Convert.ToString(rep.GetAmountInInvoice());
+
+            var payments = rep.GetPayments();
+
+            foreach (var payment in payments)
+            {
+                paymentsDGV.Rows.Add(payment.DateDisplay, payment.Amount);
+            }
+
+            var expenses =rep.GetExpenses();
+
+            foreach (var expense in expenses)
+            {
+                expensesDGV.Rows.Add(expense.DateDisplay, expense.Amount);
+            }
+        }
+
+        private void paymentsB_Click(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(1140, 350);
+            paymentsB.Visible = false;
+            rollUpB.Visible = true;
+        }
+
+        private void rollUpB_Click(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(600, 350);
+            rollUpB.Visible = false;
+            paymentsB.Visible = true;
         }
     }
 }
