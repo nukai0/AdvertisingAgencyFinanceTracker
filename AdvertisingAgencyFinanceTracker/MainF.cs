@@ -49,6 +49,8 @@ namespace AdvertisingAgencyFinanceTracker
             {
                 expensesDGV.Rows.Add(expense.DateDisplay, expense.Amount);
             }
+
+            InputInvoice(rep);
         }
 
         private void paymentsB_Click(object sender, EventArgs e)
@@ -63,6 +65,20 @@ namespace AdvertisingAgencyFinanceTracker
             this.Size = new System.Drawing.Size(600, 350);
             rollUpB.Visible = false;
             paymentsB.Visible = true;
+        }
+
+        private void InputInvoice(AdvertisingAgencyRepository rep)
+        {
+            var clientsInvoices = rep.GetInvoices();
+
+            foreach (var clientInvoice in clientsInvoices)
+            {
+                invoicesWithClentsDGV.Rows.Add(clientInvoice.Client.Company_name,
+                    clientInvoice.Client.Contact_person,
+                    clientInvoice.Invoice.DateDisplay,
+                    clientInvoice.Invoice.Amount,
+                    clientInvoice.Invoice.Status);
+            }
         }
     }
 }
