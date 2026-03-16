@@ -97,5 +97,23 @@ namespace AdvertisingAgencyFinanceTracker
                     splitOn: " id");
             }
         }
+
+        public IEnumerable<ClientInvoice> GetInvoicesByStatus(string status)
+        {
+            using (var conn = new NpgsqlConnection(connection))
+            {
+                return conn.Query<Client, Invoice, ClientInvoice>("SELECT client.id, client.company_name, client.contact_person," +
+                    " invoice.id, invoice.date, invoice.amount, invoice.status FROM invoice" +
+                    " JOIN proposal ON proposal.id = invoice.proposal_id JOIN client ON client.id = proposal.client_id" +
+                    " WHERE status = @Status",
+                    (client, invoice) => new ClientInvoice
+                    {
+                        Client = client,
+                        Invoice = invoice
+                    },
+                    new {@Status = status},
+                    splitOn: "id");
+            }
+        }
     }
 }

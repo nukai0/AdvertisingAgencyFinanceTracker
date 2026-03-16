@@ -16,5 +16,6 @@ namespace AdvertisingAgencyFinanceTracker
         IEnumerable<Payment> GetPayments();
         IEnumerable<Expense> GetExpenses();
         IEnumerable<ClientInvoice> GetInvoices();
+        IEnumerable<ClientInvoice> GetInvoicesByStatus(string status);
     }
 }
