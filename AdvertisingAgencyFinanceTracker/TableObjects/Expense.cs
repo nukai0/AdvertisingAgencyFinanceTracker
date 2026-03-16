@@ -11,6 +11,7 @@ namespace AdvertisingAgencyFinanceTracker.TableObjects
         public int Id { get; set; }
         public int Invoice_id { get; set; }
         public DateTime Date { get; set; }
+        public string DateDisplay => Date.ToString("dd.MM.yyyy");
         public int Amount { get; set; }
     }
 }
